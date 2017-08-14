@@ -17,26 +17,29 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
 
-
-//Routes to be exported to other pages , test here first 
-
-//HTML
-//may want to add the other default (without the user enterign / from Saturday)
-//send the user to the home page
-app.get("/", function(req, res){
-	res.sendFile(path.join(__dirname, "home.html"));
-});
-
-
 //get the info from the friend survey form 
 app.get("/survey", function(req, res){
 	res.sendFile(path.join(__dirname, "survey.html"));
 });
 
 
+app.get("/", function(req, res){
+	res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/home", function(Req, res){
+	res.sendFile(path.join(__dirname, "home.html"));
+});
+
+
+//send user to the survey page 
+app.get("/survey", function(req, res){
+	res.sendFile(path.join(__dirname, "survey.html"));
+});
+
 
 //API
-app.get()
+// app.get()
 
 //server listen event call 
 app.listen(PORT, function(){
