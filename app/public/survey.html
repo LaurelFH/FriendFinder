@@ -108,6 +108,49 @@
 
 
 	</form>
+
+
+<!--insert modal info here with jquery to push the name and photo to the user-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div><!--ends fluid container-->
 </body>
+<script type ="text/javascript">
+//JS to display info in a modal for the friend result
+//ajax call to the friends api
+function displayFriend(){
+	var currentURL = window.location.origin;
+	$.ajax({url: currentURL + "/api/friends", method: "GET"})
+	.done(function(friendsInfo){
+		console.log("--------------");
+		console.log("URL:" + currentURL + "/api/friends");
+		console.log(friendsInfo);
+		console.log("-------------");
+		for (var i = 0; i<friendsInfo.length; i++){
+			console.log(friendsInfo[i]);
+			//insert infor for the dynamic div element for the friend?  this will give all the info, but maybe they want just one?
+		}
+	});
+}
+
+	displayFriend();
+
+
+
+
+</script>
 </html>

@@ -1,3 +1,19 @@
+//requires the friends object info from friends
+var friends = require('../data/friends.js');
+
+
+//express app 
+module.exports = function(app){
+//get function to display friend's array in JSON
+	app.get('/api/friends', function(req, res){
+		res.json(friends);
+	});
+
+}
+
+
+
+
 // //all package dependencies 
 // var express = require("express");
 // var bodyParser = require("body-parser");
@@ -26,16 +42,16 @@
 // 	res.json();
 // });
 
-var path = require("path");
-module.exports = function(app){};
+// var path = require("path");
+// module.exports = function(app){};
 
 
 
 //create new friends for the api 
-app.post("/api/new", function(req, res){
-	var newFriend = req.body;
-	newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
-	console.log(newFriend);
-	friends.push(newFriend);
-	res.json(newFriend);
-});
+// app.post("/api/new", function(req, res){
+// 	var newFriend = req.body;
+// 	newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+// 	console.log(newFriend);
+// 	friends.push(newFriend);
+// 	res.json(newFriend);
+// });
