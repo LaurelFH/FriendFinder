@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/LaurelFH/FriendFinder/issues"
   },
-  "homepage": "https://github.com/LaurelFH/FriendFinder#readme"
+  "homepage": "https://github.com/LaurelFH/FriendFinder#readme",
+  "dependencies": {
+    "chosen-js": "^1.7.0",
+    "express": "^4.15.4"
+  }
 }
