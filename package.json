@@ -1,0 +1,23 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "an app to help find friends hosted through heroku",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaurelFH/FriendFinder.git"
+  },
+  "keywords": [
+    "friend",
+    "finder"
+  ],
+  "author": "LFH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaurelFH/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/LaurelFH/FriendFinder#readme"
+}
