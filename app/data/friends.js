@@ -35,9 +35,7 @@ var friends = [{
 // }];
 
 
-// function convertScores(){
-	
-// }
+
 
 
 

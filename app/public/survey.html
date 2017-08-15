@@ -186,16 +186,10 @@ body{
 
 
 
-
-
-
-
-
-
-
-
 </div><!--ends fluid container-->
 </body>
+
+<!--FUNCTIONS FOR THE AJAX CALL AND RESULTS-->
 <script type ="text/javascript">
 //JS to display info in a modal for the friend result
 //ajax call to the friends api
@@ -209,12 +203,79 @@ function displayFriend(){
 		console.log("-------------");
 		for (var i = 0; i<friendsInfo.length; i++){
 			console.log(friendsInfo[i]);
+			console.log(friendsInfo[i].scores);
 			//insert infor for the dynamic div element for the friend?  this will give all the info, but maybe they want just one?
 		}
 	});
 }
 
+// function captureAnswers(){
+// //capture the values from the form 
+// //example below in js fiddle http://jsfiddle.net/AlexChariz/fosb6meu/
+
+// 			// <select id="chosen-without-empty" class="chosen">
+// 			//     <option value="2">example</option>
+// 			//     <option value="3">example 2</option>
+// 			// </select>
+
+// 			// $('.chosen').chosen({
+// 			//     width: '50%',
+// 			//     allow_single_deselect: true
+// 			// });
+
+// }
+
+
+// function convertScores(){
+// 	//get the score array data from the friends array or the friendsInfo from the display function
+// 	var friendScores ="";
+
+// 	//convert this info form the object into a simple array of numbers
+
+
+// }
+
+// function compareScores(){
+// 	//compare difference between curren user' scores against all other users, question by question 
+
+// 	//add up differences to calculate totalDifference
+// 	var totalDifference ="";
+
+
+// 	//use Math.abs() to avoid negative responses (5-3 and 3-5 both shoudl return 2)
+
+// }
+
+// function closestMatch(){
+
+
+// }
+
+// function modalDisplay(){
+
+// 	//modal-body.append(topResultFriend.name);
+// 	//modal-body.append(topResultFriend.photo);
+// 	//$("modal-body").prepend(topResultFriend.name);
+// 	//$("modal-body").prepend(topResultFriend.photo);
+
+
+// }
+
+// function addToFriendsArray(){
+
+// }
+
+////////////////// CALL FUNCTIONS 
+//console.log all the users in the friends array
+$(document).ready(
 	displayFriend();
+	);
+//prevent the submit button from going through 
+$("#submit").on("click", function(event){
+	event.preventDefault();
+
+});
+
 
 
 
