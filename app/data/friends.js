@@ -28,23 +28,5 @@ var friends = [{
 
 
 
-// var user = [{
-// 	name:,
-// 	photo:,
-// 	scores:[]
-// }];
-
-
-
-
-
-
-
-
-
-
-
-
-
 //sending out the friends array to other pages
 module.exports = friends; 

@@ -182,10 +182,6 @@ body{
 
 
 
-
-
-
-
 </div><!--ends fluid container-->
 </body>
 
@@ -194,6 +190,7 @@ body{
 //JS to display info in a modal for the friend result
 //ajax call to the friends api
 function displayFriend(){
+
 	var currentURL = window.location.origin;
 	$.ajax({url: currentURL + "/api/friends", method: "GET"})
 	.done(function(friendsInfo){
@@ -201,11 +198,39 @@ function displayFriend(){
 		console.log("URL:" + currentURL + "/api/friends");
 		console.log(friendsInfo);
 		console.log("-------------");
-		for (var i = 0; i<friendsInfo.length; i++){
-			console.log(friendsInfo[i]);
-			console.log(friendsInfo[i].scores);
+
+		//need to store these differences for later??? May not actually be able to have the people here though (just the numbers)
+		var totalDifferencesArray = [];
+
+		for (var friendIndex = 0; friendIndex < friendsInfo.length; friendIndex++){
+			// console.log(friendsInfo[i]); new iterator name?
+			console.log(friendsInfo[friendIndex].scores);
 			//insert infor for the dynamic div element for the friend?  this will give all the info, but maybe they want just one?
-		}
+			//loop through the score array and compare differences between them from 1 user to another -- need friendsiNfo @ friendIndex and then their score
+			var totalDifference = 0; 
+			for(var scoreIndex = 0; scoreIndex < friendsInfo[friendsIndex].scores.length; scoreIndex++){
+				//get the 1 to 1 scores from this friends score info-- loop through to get these score components 
+				//this friend's score @ this value in the score array?-->  
+				// need to get the single score values? to setup the comparison 
+				//  totalDifference += Math.abs(friendsInfo[friendsIndex].scores[scoreIndex]- newUser.scores[scoreIndex]);
+			}//ends inner loop			
+		//add the users to the totalDifferencesArray to display later?
+		//have total difference for user, plus the total differences array???
+		(totalDifferencesArray).push(totalDifference);
+
+		}//ends outer friend loop
+
+		//after totalDiffernece, need to find person with the LEAST difference from my friends array 
+		 var minDifference = Math.min(null, totalDifferencesArray);
+		 var bestFriendIndex = 0;
+		//for loop to figure out where the index of that min number is and get the user?
+			for(var differencesIndex = 0; differencesIndex < totalDifferencesArray.length; differencesIndex++){
+				if(minDifference == totalDifferencesArray[differencesIndex]){
+					bestFriendIndex == differencesIndex; 
+				}
+			}//end for loop for the differences in the array 
+		//get friend out of friendsInfo array 
+		console.log(friendsInfo[bestFriendIndex].name);
 	});
 }
 
@@ -226,16 +251,6 @@ function displayFriend(){
 // }
 
 
-// function convertScoresToArray(){
-// 	//get the score array data from the friends array or the friendsInfo from the display function
-// 	var friendScores ="";
-
-// 	//convert this info form the object into a simple array of numbers
-	// var allConvertedScores
-	 
-
-// }
-
 // function compareScores(){
 // 	//compare difference between current user's scores against all other users, question by question 
 
@@ -253,35 +268,26 @@ function displayFriend(){
 
 // }
 
-// function closestMatch(){
-
-
-// }
 
 // function modalDisplay(){
-
 // 	//modal-body.append(topResultFriend.name);
 // 	//modal-body.append(topResultFriend.photo);
 // 	//$("modal-body").prepend(topResultFriend.name);
 // 	//$("modal-body").prepend(topResultFriend.photo);
-
-
 // }
 
-// function addToFriendsArray(){
 
-// }
 
 ////////////////// CALL FUNCTIONS 
 //console.log all the users in the friends array
-$(document).ready(
+// $(document).ready(
 	displayFriend();
-	);
+	// );
 //prevent the submit button from going through 
-$("#submit").on("click", function(event){
-	event.preventDefault();
+// $("#submit").on("click", function(event){
+// 	event.preventDefault();
 
-});
+// });
 
 
 
