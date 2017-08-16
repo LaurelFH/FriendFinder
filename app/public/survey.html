@@ -169,7 +169,7 @@ function displayFriend(){
 			//insert infor for the dynamic div element for the friend?  this will give all the info, but maybe they want just one?
 			//loop through the score array and compare differences between them from 1 user to another -- need friendsiNfo @ friendIndex and then their score
 			var totalDifference = 0; 
-			for(var scoreIndex = 0; scoreIndex < friendsInfo[friendsIndex].scores.length; scoreIndex++){
+			for(var scoreIndex = 0; scoreIndex < friendsInfo[friendIndex].scores.length; scoreIndex++){
 				//get the 1 to 1 scores from this friends score info-- loop through to get these score components 
 				//this friend's score @ this value in the score array?-->  
 				// need to get the single score values? to setup the comparison 
@@ -199,14 +199,20 @@ function displayFriend(){
 //add html tags here for the photo ot later--? decide after seeing modal?
 $("#submit").on("click", function(event){
 	event.preventDefault();
+	
+	//var quest1 = $("#question1").val();
+	//var quest2 = $("#question2").val();
+	//var quest3 = $("#question3").val();
 	var newUser = {
 		name: $("#inputName").val().trim(),
-		photo: $("#inputPhoto").val().trim()
-		//check the syntax for this, need to be set as another array as above
-		// score:  = []
+		photo: $("#inputPhoto").val().trim(),
+		//check the syntax for this, need to be set as another array as above;  [] sepertaed by commas-- worth a .slice?
+		// scores:  = [quest1, quest2, quest3]
 	};
-	console.log(newUser);
-//post the new friend to the api localhost page 
+	console.log(newUser.name);
+	console.log(newUser.photo);
+//post the new friend to the api localhost page!!!!
+ 
 	// $.post("/api/friends", newUser)
 	// .done(function(newFriend){
 	// 	console.log("You just added" + newFriend);
