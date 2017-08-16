@@ -23,6 +23,7 @@ form{
 
 p {
 	font-family: 'Averia Serif Libre', cursive;
+	color:black;
 }
 
 h1, h4 {
@@ -58,100 +59,60 @@ body{
 	<form>
 	<h1> Tell Us About Yourself</h1>
 	<!--for spacing purposes also for the choices, are these selects or dorpdown menus?-->
-	<div class = "form-group">
+<!-- 	<div class = "form-group">
 		<label for ="inputEmail">Email</label>
-		<input type ="email" class ="form-control" id="inputEmail" placeholder ="Your Email">
-	</div>
+		<input type ="email" id="inputEmail" placeholder ="Your Email">
+	</div> -->
 	<div class ="form-group">
 		<label for ="inputName">Your Name</label>
-		<input type ="text" class ="form-control" id="inputName" placeholder="Your Name">
+		<input type ="text" id="inputName" placeholder="Your Name">
 	</div>
 	<div class ="form-group">
-		<h3> Question 1</h3>
+		<label for ="inputName">Your Photo</label>
+		<input type ="text" id="inputPhoto" placeholder="https://your_photo_url">
+	</div>	
+	<div class ="form-group"><!--starts question-->
+		<label for ="question1"><h3>Question 1</h3></label>
 		<h4> blah blah blah</h4>
-		<!--dropdown menu choices-->			
-<!-- 		<div class="dropdown">
-			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Select an option 
-			    <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			    <li><a href="#">1(Strongly Disagree)</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li> 
-				<li><a href="#">4</a></li> 
-				<li><a href="#">5(Strongly Agree)</a></li> 
-			  </ul>
-			</div> ends the dropdown menu-->
 		<!--Selects be sure to add the script links for chosen-->	    
-			<select class="form-control">
-			  <option>1 (Strongly Disagree)</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5 (Strongly Agree)</option>
+			<select class="form-control" id ="question1">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
 			</select>
 	</div><!--ends question div-->
 
-	<div class ="form-group">
-		<h3> Question 2</h3>
-		<h4> blah blah blach</h4>
-		<!--dropdown menu choices-->			
-<!-- 		<div class="dropdown">
-			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Select an option 
-			    <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			    <li><a href="#">1(Strongly Disagree)</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li> 
-				<li><a href="#">4</a></li> 
-				<li><a href="#">5(Strongly Agree)</a></li> 
-			  </ul>
-			</div> ends the dropdown menu-->
+	<div class ="form-group"><!--starts question-->
+		<label for ="question2"><h3>Question 2</h3></label>
+		<h4> blah blah blah</h4>
 		<!--Selects be sure to add the script links for chosen-->	    
-			<select class="form-control">
-			  <option>1 (Strongly Disagree)</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5 (Strongly Agree)</option>
+			<select class="form-control" id ="question2">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
 			</select>
 	</div><!--ends question div-->
 	
-	<div class ="form-group">
-		<h3> Question 3</h3>
-		<h4> blah blah blach</h4>
-		<!--dropdown menu choices-->			
-<!-- 		<div class="dropdown">
-			  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-			    Select an option 
-			    <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-			    <li><a href="#">1(Strongly Disagree)</a></li>
-			    <li><a href="#">2</a></li>
-			    <li><a href="#">3</a></li> 
-				<li><a href="#">4</a></li> 
-				<li><a href="#">5(Strongly Agree)</a></li> 
-			  </ul>
-			</div> ends the dropdown menu-->
+		<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 3</h3></label>
+		<h4> blah blah blah</h4>
 		<!--Selects be sure to add the script links for chosen-->	    
-			<select class="form-control">
-			  <option>1 (Strongly Disagree)</option>
-			  <option>2</option>
-			  <option>3</option>
-			  <option>4</option>
-			  <option>5 (Strongly Agree)</option>
+			<select class="form-control" id ="question3">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
 			</select>
 	</div><!--ends question div-->
 	
 	<!--submit button-->
 
-	<button type ="submit" class="btn btn-primar btn-lg btn-block" id ="submit"> Submit Answers</button>
-
-
+	<button type ="submit" class="btn btn-primary btn-lg btn-block" id ="submit"> Submit Answers</button>
 	</form>
 
 
@@ -234,55 +195,72 @@ function displayFriend(){
 	});
 }
 
-// function captureAnswers(){
-// //capture the values from the form 
-// //example below in js fiddle http://jsfiddle.net/AlexChariz/fosb6meu/
+//could just make this a submit click event?
+//add html tags here for the photo ot later--? decide after seeing modal?
+$("#submit").on("click", function(event){
+	event.preventDefault();
+	var newUser = {
+		name: $("#inputName").val().trim(),
+		photo: $("#inputPhoto").val().trim()
+		//check the syntax for this, need to be set as another array as above
+		// score:  = []
+	};
+	console.log(newUser);
+//post the new friend to the api localhost page 
+	// $.post("/api/friends", newUser)
+	// .done(function(newFriend){
+	// 	console.log("You just added" + newFriend);
+	// 	});
 
-// 			// <select id="chosen-without-empty" class="chosen">
-// 			//     <option value="2">example</option>
-// 			//     <option value="3">example 2</option>
-// 			// </select>
+		// getNewResponses();
+		displayFriend();
+});
 
-// 			// $('.chosen').chosen({
-// 			//     width: '50%',
-// 			//     allow_single_deselect: true
-// 			// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function getNewResponses(responses){
+// //check if the responses aren't null and are selected
+// 	if(document.getElementById(responses) !=null && document.getElementById(responses).selected){
+// 		//once check is complete, grab the values of each of the questions from the user and save it as the new user array
+// 		// $("#question1 :selected").text();
+// 		var name = $("#inputName").val().trim();
+// 		var photo = $("#inputPhoto").val().trim();
+// 		console.log(name);
+// 		console.log(photo);
+// 		//select menu options for the scores
+// 		var quest1 = $("#question1").val();
+// 		var quest2 = $("#question2").val();
+// 		var quest3 = $("#question3").val();
+// 		console.log(quest1);
+// 		console.log(quest2);
+
+// 	}
+
+
 
 // }
-
-
-// function compareScores(){
-// 	//compare difference between current user's scores against all other users, question by question 
-
-// 	//add up the results of the differences between arrays to calculate totalDifference;  this means the sum is what I am creating?  Sum of a new totalDifference array?
-// 	var totalDifference = Math.abs(results);
-	// var sum = 0;
-	//for loop to go through the arrays 
-	// for(var i =0; i < friendsInfo.length; i++){
-	// 	//would the sum total difference be the only thing that mattered? the questions aren't weighted
-	// 	sum += arr
-	// }
-
-
-// 	//use Math.abs() to avoid negative responses (5-3 and 3-5 both shoudl return 2)
-
-// }
-
-
-// function modalDisplay(){
-// 	//modal-body.append(topResultFriend.name);
-// 	//modal-body.append(topResultFriend.photo);
-// 	//$("modal-body").prepend(topResultFriend.name);
-// 	//$("modal-body").prepend(topResultFriend.photo);
-// }
-
 
 
 ////////////////// CALL FUNCTIONS 
 //console.log all the users in the friends array
-// $(document).ready(
-	displayFriend();
-	// );
+// $(document).ready(function(){
+	
+// 	getNewResponses();
+// 	displayFriend();
+
+// });
 //prevent the submit button from going through 
 // $("#submit").on("click", function(event){
 // 	event.preventDefault();
