@@ -6,9 +6,9 @@ var path = require('path');
 module.exports = function(app){
 
 	//default to home page if nothing entered 
-	// app.get('/', function(req, res){
-	// 	res.sendFile(path.join(__dirname + '/../public/home.html'));
-	// });
+	app.get('/', function(req, res){
+		res.sendFile(path.join(__dirname + '/../public/home.html'));
+	});
 
 	//routes the user to the home page if they enter home
 	app.get('/home', function(Req, res){
