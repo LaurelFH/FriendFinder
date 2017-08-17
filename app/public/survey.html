@@ -115,22 +115,20 @@ body{
 	<button type ="submit" class="btn btn-primary btn-lg btn-block" id ="submit"> Submit Answers</button>
 	</form>
 
-
-<!--insert modal info here with jquery to push the name and photo to the user-->
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+<!--insert modal info here with jquery to push the name and photo of the best friend to the user-->
+<!-- <!Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> --> -->
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Here's Your Final Friend</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id ="displayNewFriend">
         <p>Some text in the modal.</p>
       </div>
       <div class="modal-footer">
@@ -140,7 +138,6 @@ body{
 
   </div>
 </div>
-
 
 
 </div><!--ends fluid container-->
@@ -192,6 +189,15 @@ function displayFriend(){
 			}//end for loop for the differences in the array 
 		//get friend out of friendsInfo array 
 		console.log(friendsInfo[bestFriendIndex].name);
+
+
+		//activate the modal with the best friend's name and photo
+		var yourFinalFriend = friendsInfo[bestFriendIndex].name; 
+		var yourFinalFriendPhoto = friendsInfo[bestFriendIndex].photo;
+		$("#myModal").modal('show');
+				//doublec check .html versus .text here 
+		$("#displayNewFriend").text("<a href=>"+ yourFinalFriendPhoto + "</a>");
+		$("#displayNewFriend").text(yourFinalFriend);
 	});
 }
 
@@ -212,7 +218,7 @@ $("#submit").on("click", function(event){
 	console.log(newUser.name);
 	console.log(newUser.photo);
 //post the new friend to the api localhost page!!!!
- 
+
 	// $.post("/api/friends", newUser)
 	// .done(function(newFriend){
 	// 	console.log("You just added" + newFriend);
@@ -220,6 +226,9 @@ $("#submit").on("click", function(event){
 
 		// getNewResponses();
 		displayFriend();
+
+
+
 });
 
 
