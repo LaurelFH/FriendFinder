@@ -24,9 +24,17 @@ var friends = [{
 		3,
 		2
 		]
-	},
+	},{
 
-	{
+	name: "Gladiolus",
+	photo:"https://vignette3.wikia.nocookie.net/finalfantasy/images/1/1b/Ignis-Gladiolus-FFXV.png/revision/latest?cb=20170104002718",
+	scores:[
+		4,
+		4,
+		4
+		]
+	},	{
+		
 	name:"Anthy",
 	photo:"https://static.comicvine.com/uploads/scale_small/5/59032/3717894-game_art_015.jpg",
 	scores:[
