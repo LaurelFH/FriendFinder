@@ -8,6 +8,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!--google font link-->
 <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre" rel="stylesheet">
+<!--link to chosen CDN-->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+ -->
 <style>
 
 form{
@@ -73,7 +77,7 @@ body{
 	</div>	
 	<div class ="form-group"><!--starts question-->
 		<label for ="question1"><h3>Question 1</h3></label>
-		<h4> blah blah blah</h4>
+		<h4> I love cooking for others</h4>
 		<!--Selects be sure to add the script links for chosen-->	    
 			<select class="form-control" id ="question1">
 			  <option value ="1">1 (Strongly Disagree)</option>
@@ -86,7 +90,7 @@ body{
 
 	<div class ="form-group"><!--starts question-->
 		<label for ="question2"><h3>Question 2</h3></label>
-		<h4> blah blah blah</h4>
+		<h4> I could sing and dance all day</h4>
 		<!--Selects be sure to add the script links for chosen-->	    
 			<select class="form-control" id ="question2">
 			  <option value ="1">1 (Strongly Disagree)</option>
@@ -99,7 +103,7 @@ body{
 	
 		<div class ="form-group"><!--starts question-->
 		<label for ="question3"><h3>Question 3</h3></label>
-		<h4> blah blah blah</h4>
+		<h4> I think loyalty is the most important virtue</h4>
 		<!--Selects be sure to add the script links for chosen-->	    
 			<select class="form-control" id ="question3">
 			  <option value ="1">1 (Strongly Disagree)</option>
@@ -167,7 +171,7 @@ function displayFriend(){
 			//loop through the score array and compare differences between them from 1 user to another -- need friendsiNfo @ friendIndex and then their score
 			var totalDifference = 0; 
 			//DECLARE NEWUSER VARIBALE HERE FOR THE FOR LOOP ERROR IN 174 (NEWUSER'S SCOPE IS MESSED UP)?
-//--maybe a parameter?
+			// var newUser = {};//--maybe a parameter?
 
 			for(var scoreIndex = 0; scoreIndex < friendsInfo[friendIndex].scores.length; scoreIndex++){
 				//get the 1 to 1 scores from this friends score info-- loop through to get these score components 
@@ -226,9 +230,12 @@ $("#submit").on("click", function(event){
 	};
 	console.log(newUser.name);
 	console.log(newUser.photo);
-	console.log(newUser.scores);
+		// var newUser.scores = newUser.map();
+		//http://api.jquery.com/jQuery.makeArray/
+		//https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
+	// 	$.map(newUser.sc)
+	// console.log(newUser.scores);
 //post the new friend to the api localhost page!!!!
-
 	// $.post("/api/friends", newUser)
 	// .done(function(newFriend){
 	// 	console.log("You just added" + newFriend);
@@ -241,19 +248,7 @@ $("#submit").on("click", function(event){
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//https://harvesthq.github.io/chosen/#standard-select
 
 // function getNewResponses(responses){
 // //check if the responses aren't null and are selected
