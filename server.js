@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
+//use favicon in public folder (can do this with css files too)
+app.use(express.static('public'));
+
 //default to the home page needed here too?
 //makes sure this pge links/requires out html routing
 //same app from express 
