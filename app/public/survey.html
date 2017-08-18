@@ -42,6 +42,36 @@ a {
 	font-size: larger;
 }
 
+input, select, textarea{
+    color: black;
+}
+
+textarea:focus, input:focus {
+    color: black;
+}
+
+
+#myModal{
+
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+}
+
+.nav{
+	background-color:rgba(0,0,0,0.5);
+	color:white;
+}
+
+.btn-primary{
+	opacity: .9;
+
+}
+
+label{
+
+	font-weight: normal;
+}
+
 body{
 	background: url("https://s3.amazonaws.com/zam-www/assets/editorial/2017/01/ffxv_road.jpg");	
 	background-repeat: no-repeat;
@@ -58,11 +88,24 @@ body{
 </head>
 <body>
 <div class ="container">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home">Final Friend Finder</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/home">Home</a></li>
+      <li><a href="/api/friends">Friends List</a></li>
+      <li><a href="https://github.com/LaurelFH/FriendFinder">GitHub</a></li>
+
+    </ul>
+  </div>
+</nav>
 
 	<!-- <form class ="form-horizontal"> -->
 	<form>
 	<h1>Before hopping in, tell us about yourself...</h1>
-	<h2>Who will join you on your next adventure?</h2>
+	<!-- <h2>Who will join you on your next adventure?</h2> -->
 	<!--for spacing purposes also for the choices, are these selects or dorpdown menus?-->
 	<div class ="form-group">
 		<label for ="inputName">What is your name?(Required)</label>
@@ -287,7 +330,7 @@ function displayFriend(newUser){
 		$("#myModal").modal('show');
 				//double check .html versus .text here 
 		$("#displayNewFriend").text(yourFinalFriend);//works
-		$("#displayFriendPhoto").html("<img src="+ yourFinalFriendPhoto +">");
+		$("#displayFriendPhoto").html("<img src="+ yourFinalFriendPhoto +" class='img-responsive'"+">");
 
 		//call the post so the user goes in the array?
 		// $.post('/api/friends', JSON.stringify(newUser));
