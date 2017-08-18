@@ -5,6 +5,13 @@ var friends = [{
     scores: [
         1,
         1,
+        5,
+        2,
+        5,
+        5,
+        3,
+        2,
+        1,
         1
     ]
 }, {
@@ -12,8 +19,15 @@ var friends = [{
     photo: "http://images2.wikia.nocookie.net/__cb20130206131130/finalfantasy/images/9/96/FFXIIIversus_Noctis.png",
     scores: [
         1,
-        2,
-        3
+        1,
+        5,
+        3,
+        5,
+        4,
+        5,
+        5,
+        1,
+        1
     ]
 
 }, {
@@ -24,7 +38,15 @@ var friends = [{
 
         3,
         3,
-        3
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        1,
+        5
+
     ]
 
 
@@ -33,8 +55,15 @@ var friends = [{
     photo: "http://geekandsundry.com/wp-content/uploads/2017/01/ignis-ffxv.jpg",
     scores: [
 
-        1,
+        5,
         2,
+        5,
+        2,
+        5,
+        3,
+        2,
+        5,
+        1,
         3
     ]
 }, {
@@ -42,34 +71,62 @@ var friends = [{
     photo: "http://vignette4.wikia.nocookie.net/finalfantasy/images/3/38/Prompto-Photographer-FFXV.png/revision/latest?cb=20170106031156",
     scores: [
         2,
+        5,
+        5,
+        5,
+        4,
         3,
-        2
+        5,
+        5,
+        1,
+        3
     ]
 }, {
 
     name: "Gladiolus",
     photo: "https://vignette3.wikia.nocookie.net/finalfantasy/images/1/1b/Ignis-Gladiolus-FFXV.png/revision/latest?cb=20170104002718",
     scores: [
+        1,
         4,
-        4,
-        4
+        5,
+        2,
+        5,
+        5,
+        3,
+        5,
+        5,
+        1
     ]
 }, {
 
     name: "Barret",
     photo: "http://www.finalfantasyunion.com/charimg/barret-wallace.jpg",
     scores: [
+        1,
+        1,
+        5,
+        1,
         5,
         5,
-        5
+        2,
+        2,
+        4,
+        3
     ]
 }, {
-    name: "Mikasa",
-    photo: "https://myanimelist.cdn-dena.com/images/characters/9/215563.jpg",
+    name: "Cloud",
+    photo: "http://wallpapercave.com/wp/ncLNtpQ.jpg",
     scores: [
         1,
-        3,
-        5
+        1,
+        5,
+        1,
+        5,
+        5,
+        5,
+        4,
+        4,
+        1
     ]
 }];
 
