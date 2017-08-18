@@ -132,9 +132,14 @@ body{
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Here's Your Final Friend</h4>
       </div>
-      <div class="modal-body" id ="displayNewFriend">
-        <p>Some text in the modal.</p>
+      <div class="modal-body" >
+        <div id ="displayNewFriend">
+        <p>Your friend's name goes here.</p>
+        </div>
+        <div id = "displayFriendPhoto">
+        </div>
       </div>
+       
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
@@ -204,10 +209,13 @@ function displayFriend(newUser){
 		var yourFinalFriend = friendsInfo[bestFriendIndex].name; 
 		var yourFinalFriendPhoto = friendsInfo[bestFriendIndex].photo;
 		$("#myModal").modal('show');
-				//doublec check .html versus .text here 
+				//double check .html versus .text here 
 		$("#displayNewFriend").text(yourFinalFriend);//works
-		$("#displayNewFriend").append(yourFinalFriendPhoto);
-		
+		$("#displayFriendPhoto").html("<img src="+ yourFinalFriendPhoto +">");
+
+		//call the post so the user goes in the array?
+		// $.post('/api/friends', JSON.stringify(newUser));
+		$.post('/api/friends', newUser);
 	});
 }
 
