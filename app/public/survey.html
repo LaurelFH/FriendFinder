@@ -151,7 +151,7 @@ body{
 <script type ="text/javascript">
 //JS to display info in a modal for the friend result
 //ajax call to the friends api
-function displayFriend(){
+function displayFriend(newUser){
 
 	var currentURL = window.location.origin;
 	$.ajax({url: currentURL + "/api/friends", method: "GET"})
@@ -189,17 +189,16 @@ function displayFriend(){
 
 		//after totalDiffernece, need to find person with the LEAST difference from my friends array 
 		 var minDifference = Math.min.apply(null, totalDifferencesArray);
-		 var bestFriendIndex = 0;
+		 var bestFriendIndex = totalDifferencesArray.indexOf(minDifference);
 		//for loop to figure out where the index of that min number is and get the user?
-			for(var differencesIndex = 0; differencesIndex < totalDifferencesArray.length; differencesIndex++){
-				if(minDifference == totalDifferencesArray[differencesIndex]){
-					bestFriendIndex == differencesIndex; 
-				}
-			}//end for loop for the differences in the array 
+			// for(var differencesIndex = 0; differencesIndex < totalDifferencesArray.length; differencesIndex++){
+			// 	if(minDifference == totalDifferencesArray[differencesIndex]){
+			// 		bestFriendIndex == differencesIndex; 
+			// 	}
+			// }//end for loop for the differences in the array 
 		//get friend out of friendsInfo array 
 		console.log("your best friend min difference is" + minDifference + "and index position is" + bestFriendIndex);
 		console.log("this means your best friend is" + friendsInfo[bestFriendIndex].name);
-
 
 		//activate the modal with the best friend's name and photo
 		var yourFinalFriend = friendsInfo[bestFriendIndex].name; 
@@ -217,9 +216,10 @@ function displayFriend(){
 $("#submit").on("click", function(event){
 	event.preventDefault();
 	
-	var quest1 = $("#question1").val();
-	var quest2 = $("#question2").val();
-	var quest3 = $("#question3").val();
+	var quest1 = parseInt($("#question1").val());
+	var quest2 = parseInt($("#question2").val());
+	var quest3 = parseInt($("#question3").val());
+
 
 	var newUser = {
 		name: $("#inputName").val().trim(),
@@ -230,6 +230,7 @@ $("#submit").on("click", function(event){
 	};
 	console.log(newUser.name);
 	console.log(newUser.photo);
+	console.log(newUser.scores);
 		// var newUser.scores = newUser.map();
 		//http://api.jquery.com/jQuery.makeArray/
 		//https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
@@ -242,7 +243,7 @@ $("#submit").on("click", function(event){
 	// 	});
 
 		// getNewResponses();
-		displayFriend();
+		displayFriend(newUser);
 
 
 
