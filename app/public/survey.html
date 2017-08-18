@@ -113,15 +113,94 @@ body{
 			  <option value ="5">5 (Strongly Agree)</option>
 			</select>
 	</div><!--ends question div-->
-	
+		<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 4</h3></label>
+		<h4> I want to capture all of nature's beauty</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question4">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 5</h3></label>
+		<h4> I have to protect everyone</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question5">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 6</h3></label>
+		<h4> I have to work out both my body and my mind</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question6">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 7</h3></label>
+		<h4> I need to reinvent myself</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question7">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 8</h3></label>
+		<h4> I love to travel </h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question8">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 9</h3></label>
+		<h4> I prefer to be on my own</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question9">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
+			<div class ="form-group"><!--starts question-->
+		<label for ="question3"><h3>Question 10</h3></label>
+		<h4> I think bright colors are always stylish</h4>
+		<!--Selects be sure to add the script links for chosen-->	    
+			<select class="form-control" id ="question10">
+			  <option value ="1">1 (Strongly Disagree)</option>
+			  <option value ="2">2</option>
+			  <option value ="3">3</option>
+			  <option value ="4">4</option>
+			  <option value ="5">5 (Strongly Agree)</option>
+			</select>
+	</div><!--ends question div-->
 	<!--submit button-->
 
 	<button type ="submit" class="btn btn-primary btn-lg btn-block" id ="submit"> Submit Answers</button>
 	</form>
-
-<!--insert modal info here with jquery to push the name and photo of the best friend to the user-->
-<!-- <!Trigger the modal with a button -->
-<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> --> -->
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -227,76 +306,30 @@ $("#submit").on("click", function(event){
 	var quest1 = parseInt($("#question1").val());
 	var quest2 = parseInt($("#question2").val());
 	var quest3 = parseInt($("#question3").val());
-	
+	var quest4 = parseInt($("#question4").val());
+	var quest5 = parseInt($("#question5").val());
+	var quest6 = parseInt($("#question6").val());
+	var quest7 = parseInt($("#question7").val());
+	var quest8 = parseInt($("#question8").val());
+	var quest9 = parseInt($("#question9").val());
+	var quest10 = parseInt($("#question10").val());
 
 	var newUser = {
 		name: $("#inputName").val().trim(),
 		photo: $("#inputPhoto").val().trim(),
 		//check the syntax for this, need to be set as another array as above;  [] sepertaed by commas-- worth a .slice?
 		//returned the scores as strings, not numbers??? var arrayOfNumbers = arrayOfStrings.map(Number);
-		scores: [quest1, quest2, quest3]
+		scores: [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8, quest9, quest10]
 	};
 	console.log(newUser.name);
 	console.log(newUser.photo);
 	console.log(newUser.scores);
-		// var newUser.scores = newUser.map();
-		//http://api.jquery.com/jQuery.makeArray/
-		//https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
-	// 	$.map(newUser.sc)
-	// console.log(newUser.scores);
-//post the new friend to the api localhost page!!!!
-	// $.post("/api/friends", newUser)
-	// .done(function(newFriend){
-	// 	console.log("You just added" + newFriend);
-	// 	});
 
-		// getNewResponses();
 		displayFriend(newUser);
-
-
 
 });
 
 //https://harvesthq.github.io/chosen/#standard-select
-
-// function getNewResponses(responses){
-// //check if the responses aren't null and are selected
-// 	if(document.getElementById(responses) !=null && document.getElementById(responses).selected){
-// 		//once check is complete, grab the values of each of the questions from the user and save it as the new user array
-// 		// $("#question1 :selected").text();
-// 		var name = $("#inputName").val().trim();
-// 		var photo = $("#inputPhoto").val().trim();
-// 		console.log(name);
-// 		console.log(photo);
-// 		//select menu options for the scores
-// 		var quest1 = $("#question1").val();
-// 		var quest2 = $("#question2").val();
-// 		var quest3 = $("#question3").val();
-// 		console.log(quest1);
-// 		console.log(quest2);
-
-// 	}
-
-
-
-// }
-
-
-////////////////// CALL FUNCTIONS 
-//console.log all the users in the friends array
-// $(document).ready(function(){
-	
-// 	getNewResponses();
-// 	displayFriend();
-
-// });
-//prevent the submit button from going through 
-// $("#submit").on("click", function(event){
-// 	event.preventDefault();
-
-// });
-
-
 
 
 
